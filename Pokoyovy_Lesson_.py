@@ -1,43 +1,63 @@
-#Дз на понедельник (Ivanov_Lesson_12.py)
-# 1. Создать текстовый файл, записать в него построчно данные, которые вводит пользователь. Окончанием ввода пусть служит пустая строка.
-#2. В текстовом файле посчитать количество строк, а также для каждой отдельной строки определить количество в ней символов.
-# 3. Есть список состоящий из слов и чисел, нужно записать в файл сначала
-# слова в порядке их длины, а после слов цифры в порядке возрастания.
-# 4. Добавьте на свой РАБОЧИЙ СТОЛ папку my_name, в ней создайте 3 текстовых файла через цикл: test_1.txt, test_2.txt, test_3.txt.
-# Затем переименуйте файлы на: rename_1.txt, rename_2.txt, rename_3.txt.
-# После этого удалите созданную папку.
-# Все операции выполнять с помощью встроенных функций библиотеки os
+#Новый файл
 
-# 1. Создать текстовый файл, записать в него построчно данные, которые вводит пользователь. Окончанием ввода пусть служит пустая строка.
-# f = open(r"C:\Users\User\PycharmProjects\Grup 212 Pokoyovy\Home.txt", "w")
-# while True:
-#           lines = input('Введите строку: ')
-#           if lines != " ":
-#               f.write(lines + "\n")
-#               continue
-#           else:break
-#2. В текстовом файле посчитать количество строк, а также для каждой отдельной строки определить количество в ней символов.
-# with open(r"C:\Users\User\PycharmProjects\Grup 212 Pokoyovy\Home.txt", "r") as f:
-#     print(len(f.readlines()))
+#Дз на четверг (Ivanov_Lesson_13.py)
+# Создайте новый проект.
+# С помощь консоли Git bush (или любой другой) создайте локальный репозиторий в папке проекта (git init).
+# В локальном репозитории добавьте новый текстовый файл.
+# Затем создайте новую ветку и измените в ней текстовый файл.
+# После чего соедините ветки.
+# Локальный репозиторий опубликуйте на GitHub с помощью консоли GitBush или с помощью PyCharm через Share on GitHub
+#Сбрасываем мне ссылку на проект на GitHub
+
+def calculate():
+operation = input('''
+Please type in the math operation you would like to complete:
++ for addition
+- for subtraction
+* for multiplication
+/ for division
+''')
+number_1 = int(input('Please enter the first number: '))
+number_2 = int(input('Please enter the second number: '))
+if operation == '+':
+    print('{} + {} = '.format(number_1, number_2))
+    print(number_1 + number_2)
+elif operation == '-':
+    print('{} - {} = '.format(number_1, number_2))
+    print(number_1 - number_2)
+elif operation == '*':
+    print('{} * {} = '.format(number_1, number_2))
+    print(number_1 * number_2)
+elif operation == '/':
+    print('{} / {} = '.format(number_1, number_2))
+    print(number_1 / number_2)
+else:
+    print('You have not typed a valid operator, please run the program again.')
+# Добавление функции again() в calculate()
+again()
+def again():
+    calc_again = input('''
+Do you want to calculate again?
+Please type Y for YES or N for NO.
+''')
+if calc_again.upper() == 'Y':
+    calculate()
+elif calc_again.upper() == 'N':\
+    print('See you later.')
+else: again()
+#calculate()
+
+# def calculater():
+#     a = float(input('Первое число: '))
+#     b = float(input('Второе число: '))
+# #     sign = str(input('Введите операцию (для выхода введите 0): '))
+#     if sign == '0': break
 #
-# f = open(r"C:\Users\User\PycharmProjects\Grup 212 Pokoyovy\Home.txt", "r")
-# s = 0
-# for line in f:
-#     s = len(line.strip())
-#     print(s)
-
-# 3. Есть список состоящий из слов и чисел, нужно записать в файл сначала
-# слова в порядке их длины, а после слов цифры в порядке возрастания.
-
-# t = (int, float)
-#lines = ["ewrer",5,"wr",15,"rew",9,"werer","wer",9.4]
-# a = sorted([i for i in lines if isinstance(i,t)])
-# print(a)
-# f = open(r"C:\Users\User\PycharmProjects\Grup 212 Pokoyovy\Home.txt", "w")
-# f.write(str (a))
-
-# 4. Добавьте на свой РАБОЧИЙ СТОЛ папку my_name, в ней создайте 3 текстовых файла через цикл: test_1.txt, test_2.txt, test_3.txt.
-# Затем переименуйте файлы на: rename_1.txt, rename_2.txt, rename_3.txt.
-# После этого удалите созданную папку.
-# Все операции выполнять с помощью встроенных функций библиотеки os
-#
+#     if sign == '+': print(a+b)
+#     elif sign == '-': print(a-b)
+#     elif sign == '*': print(a * b)
+#     elif sign == '/':
+#         if b != 0:print(a / b)
+#         else: print('На ноль делить нельзя!')
+#     else:
+#         print('Такой операции нет!')
